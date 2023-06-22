@@ -48,3 +48,28 @@ body {
     color: #333233;
     margin: 0 auto;
 }
+
+.test3{
+    margin-top: 5rem;
+}
+
+.test3 button {
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+    border: 1px solid #ccc;
+    background-color: #4c8bf5;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px;
+}
+
+.test3 button:hover {
+    background-color: #1f5db2;
+    color: #ffffff;
+}
+
+.test3 button:active {
+    background-color: #0d4180;
+    color: #ffffff;
+}
