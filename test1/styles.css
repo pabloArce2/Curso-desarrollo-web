@@ -57,7 +57,7 @@ body {
     font-size: 1.6rem;
     padding: 1rem 2rem;
     border: 1px solid #ccc;
-    background-color: #4c8bf5;
+    background-color: #4c8bc0;
     color: #ffffff;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
@@ -70,6 +70,6 @@ body {
 }
 
 .test3 button:active {
-    background-color: #0d4180;
+    background-color: #333233;
     color: #ffffff;
 }

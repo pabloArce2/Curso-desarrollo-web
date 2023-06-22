@@ -1,0 +1,43 @@
+{
+    "compras": [
+        {
+            "id": 1,
+            "fecha": "2019-01-01",
+            "total": 1000,
+            "productos": [
+                {
+                    "id": 1,
+                    "nombre": "Producto 1",
+                    "precio": 100,
+                    "cantidad": 2
+                },
+                {
+                    "id": 2,
+                    "nombre": "Producto 2",
+                    "precio": 200,
+                    "cantidad": 3
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "fecha": "2019-01-02",
+            "total": 2000,
+            "productos": [
+                {
+                    "id": 1,
+                    "nombre": "Producto 1",
+                    "precio": 100,
+                    "cantidad": 2
+                },
+                {
+                    "id": 2,
+                    "nombre": "Producto 2",
+                    "precio": 200,
+                    "cantidad": 3
+                }
+            ]
+        }
+    ]
+
+}
