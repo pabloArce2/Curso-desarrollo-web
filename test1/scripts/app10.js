@@ -1,14 +1,14 @@
-function getPurchases() {
+async function getPurchases() {
     const archivo = "purchases.json";
 
-    fetch(archivo)
+    /*fetch(archivo)
         .then(response => {
             return response.json();
         })
         .then(data => {
-            let purchases = data;
+            let { purchases } = data;
             let html = '';
-            purchases[0].forEach(purchase => {
+            purchases.forEach(purchase => {
                 html += `
                     <div>
                         <h2>${purchase.id}</h2>
@@ -18,7 +18,13 @@ function getPurchases() {
                 `;
             });
             document.getElementById('container').innerHTML = html;
-        })
+        })*/
+
+    const response = await fetch(archivo);
+    const data = await response.json();
+    console.log(data);
+    let html = '';
+
 }
 
 getPurchases();
