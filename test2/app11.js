@@ -3,21 +3,37 @@ const paragraph = document.querySelector('#text');
 const button = document.querySelector('#button');
 const container3 = document.querySelector('#container3');
 let counter = 0;
+let scrollCounter = 0;
 
 const headingText = "Esto es un titulo";
-const paragraphText = "Esto es un parrafo: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam.";
+const paragraphText = "Esto es un parrafo cargado desde JS: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam. Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam. Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam.Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam.";
+
+//DOMContentLoaded, solo espera por el html, no espera por imagenes ni css
+//load espera por todo el html, imagenes, css, etc
 
 heading.innerHTML = headingText;
 paragraph.innerHTML = paragraphText;
 
 button.addEventListener('click', () => {
     const newLine = document.createElement('p');
-    newLine.innerHTML = "Esto es una nueva linea";
+    newLine.innerHTML = "Esto es una nueva linea (linea " + (counter + 1) + ")";
     container3.appendChild(newLine);
     counter++;
     if (counter === 5) {
         container3.innerHTML += "No puedes agregar mas lineas";
         button.disabled = true;
+    }
+}
+);
+
+window.addEventListener('scroll', () => {
+    scrollCounter++;
+    if (scrollCounter === 100) {
+        alert("Ya te cansaste de hacer scroll?");
+    }
+    else if(scrollCounter === 1000)
+    {
+        alert("Vas por el scroll " + scrollCounter);
     }
 }
 );

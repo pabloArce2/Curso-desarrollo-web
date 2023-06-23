@@ -7,10 +7,10 @@ body{
     padding: 0;
 }
 
-.container{
+.container-1{
     background-color: #20115b;
     color: #fff;
-    padding-top: 20px;
+    padding: 20px;
     padding-bottom: 40px;
     margin-top: 20px;
     margin-left: 10%;
@@ -38,6 +38,18 @@ body{
     text-align: center;
     background-color: #20115b;
     color: #fff;
+}
+
+.container-4{
+    padding-bottom: 500px;
+    border: 1px solid #010108;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #010108;
+    padding: 20px;
+    background-color: #20115b;
+    color: #fff;
+    margin-top: 50px;
+    
 }
 
 .button {
