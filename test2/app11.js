@@ -37,3 +37,42 @@ window.addEventListener('scroll', () => {
     }
 }
 );
+
+const inputPassword = document.querySelector('#inputPassword');
+    const checkboxes = {
+        length: document.querySelector('#length'),
+        lowercase: document.querySelector('#lowercase'),
+        uppercase: document.querySelector('#uppercase'),
+        number: document.querySelector('#number'),
+        special: document.querySelector('#special')
+    };
+
+    inputPassword.addEventListener('input', (event) => {
+        const password = event.target.value;
+        validatePassword(password);
+    });
+
+    const validatePassword = (password) => {
+        const conditionsPassword = {
+            length: password.length >= 8,
+            lowercase: /[a-z]/.test(password),
+            uppercase: /[A-Z]/.test(password),
+            number: /[0-9]/.test(password),
+            special: /[!@#$%^&*]/.test(password)
+        };
+
+        for (const condition in conditionsPassword) {
+            checkboxes[condition].checked = conditionsPassword[condition];
+        }
+
+        for (const condition in conditionsPassword) {
+            checkboxes[condition].checked = conditionsPassword[condition];
+            if (conditionsPassword[condition]) {
+                checkboxes[condition].nextElementSibling.classList.remove('disabled');
+                checkboxes[condition].nextElementSibling.classList.add('valid');
+            } else {
+                checkboxes[condition].nextElementSibling.classList.remove('valid');
+                checkboxes[condition].nextElementSibling.classList.add('disabled');
+            }
+        }
+    };

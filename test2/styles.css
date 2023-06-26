@@ -72,3 +72,9 @@ body{
     background-color: #333233;
     color: #ffffff;
 }
+
+
+.form-check-label.valid {
+    color: #28a745;
+    opacity: 1;
+}
