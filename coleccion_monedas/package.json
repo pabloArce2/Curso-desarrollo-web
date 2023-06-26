@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/pabloArce2/Curso-desarrollo-web/issues"
   },
-  "homepage": "https://github.com/pabloArce2/Curso-desarrollo-web#readme"
+  "homepage": "https://github.com/pabloArce2/Curso-desarrollo-web#readme",
+  "dependencies": {
+    "sass": "^1.63.6"
+  }
 }
