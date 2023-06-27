@@ -6,19 +6,31 @@
     padding: 2rem 0;
 
     h1{
+        margin-bottom: 4rem;
         color: var.$verde-oscuro;
+        text-align: center;
+    }
+
+    .container-content{
+        @include m.tablet{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin : 0 auto;
+        }
     }
 }
 
 .primary-nav{
-    @include m.phone{background-color: antiquewhite;}
-    @include m.tablet{background-color: aqua;}
-    @include m.desktop{background-color: black;}
-    @include m.desktopXL{background-color: blanchedalmond;}
-
+    @include m.tablet {
+        display: flex;
+        gap: 2rem;
+    }
 
     a {
-        margin-right: 2rem;
+        text-align: center;
+        display: block;
+        margin-bottom: 1rem;
         color: var.$verde-oscuro;
         font-size: 2.2rem;
 
