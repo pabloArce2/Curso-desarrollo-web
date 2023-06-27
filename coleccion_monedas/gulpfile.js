@@ -1,5 +1,6 @@
 const { src, dest, watch } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
+const plumber = require('gulp-plumber');
 
 function tarea(done) {
     while (true) {
@@ -11,6 +12,7 @@ function tarea(done) {
 function css(done) {
     
     src("src/scss/**/*.scss") // Archivo de entrada
+        .pipe(plumber()) // Evita que se detenga el proceso en caso de error
         .pipe(sass()) // Compila el archivo SASS a CSS 
         .pipe(dest("build/css")); // Carpeta de destino
     

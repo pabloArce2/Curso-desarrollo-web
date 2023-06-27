@@ -1,8 +1,5 @@
-@use "base/variables" as var;
-@use "contenido/contenido" as cont;
+@use "base";
+@use "layout";
 
-body{
-    background-color: var.$negro;
-    font-family: var.$fuente;
-}
+
 
