@@ -1,6 +1,8 @@
-$background: red;
+@use "base/variables" as var;
+@use "contenido/contenido" as cont;
 
 body{
-    background-color: $background;
+    background-color: var.$negro;
+    font-family: var.$fuente;
 }
 
