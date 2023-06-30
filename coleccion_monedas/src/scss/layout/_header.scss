@@ -25,6 +25,7 @@
     @include m.tablet {
         display: flex;
         gap: 2rem;
+        padding-bottom: 1.5rem;
     }
 
     a {

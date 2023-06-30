@@ -407,6 +407,7 @@ h3 {
   .primary-nav {
     display: flex;
     gap: 2rem;
+    padding-bottom: 1.5rem;
   }
 }
 .primary-nav a {
