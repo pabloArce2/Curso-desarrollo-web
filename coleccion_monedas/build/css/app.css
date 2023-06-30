@@ -422,7 +422,7 @@ h3 {
 
 .video {
   position: relative;
-  max-height: 60rem;
+  max-height: 70rem;
   overflow: hidden;
 }
 .video .overlay {
@@ -477,16 +477,5 @@ h3 {
   }
   .video-container p {
     font-size: 2rem;
-  }
-}
-@media (min-width: 1200px) {
-  .video-container {
-    margin-top: 20rem;
-  }
-  .video-container h2 {
-    font-size: 8rem;
-  }
-  .video-container p {
-    font-size: 2.5rem;
   }
 }

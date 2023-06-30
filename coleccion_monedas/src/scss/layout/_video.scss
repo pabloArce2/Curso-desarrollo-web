@@ -3,7 +3,7 @@
 
 .video {
     position: relative;
-    max-height: 60rem;
+    max-height: 70rem;
     overflow: hidden;
 
     .overlay{
@@ -49,12 +49,5 @@
             font-size: 6rem;
         }
         p{font-size: 2rem;}
-    }
-    @include m.desktopXL{
-        margin-top: 20rem;
-        h2{
-            font-size: 8rem;
-        }
-        p{font-size: 2.5rem;}
     }
 }
