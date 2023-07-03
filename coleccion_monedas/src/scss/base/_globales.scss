@@ -19,7 +19,6 @@ body{
 
 p{
     font-size: 2rem;
-    color: var.$negro;
 }
 
 a{
@@ -48,4 +47,7 @@ h3{
     font-size: 3rem;
 }
 
-
+img{
+    max-width: 100%;
+    display: block;
+}

@@ -356,7 +356,6 @@ body {
 
 p {
   font-size: 2rem;
-  color: #222222;
 }
 
 a {
@@ -383,6 +382,11 @@ h2 {
 
 h3 {
   font-size: 3rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 .header {
@@ -478,4 +482,56 @@ h3 {
   .video-container p {
     font-size: 2rem;
   }
+}
+
+.section1 {
+  background-color: #222222;
+}
+
+.aboutus-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+.aboutus-content p {
+  font-size: 1.8rem;
+}
+.aboutus-content h2 {
+  margin-bottom: 2rem;
+}
+.aboutus-content .underline {
+  font-size: 2rem;
+  font-weight: 100;
+  margin-bottom: 0;
+  background-color: #16A963;
+  max-width: fit-content;
+  padding: 0.5rem 1rem;
+  margin: 0 auto;
+}
+
+.aboutus {
+  padding: 5rem 0;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .aboutus {
+    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5rem;
+  }
+  .aboutus .underline {
+    margin: 0;
+  }
+}
+.aboutus img {
+  box-shadow: 0 4px 10px rgba(22, 169, 99, 0.6);
+  border-radius: 4px;
+}
+
+.imagen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -8,6 +8,17 @@
     margin-bottom: 1rem;
 }
 
+@mixin shadow($color) {
+    box-shadow: 0 4px 10px rgba($color, 0.6);
+    border-radius: 4px;
+}
+
+@mixin grid(){
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5rem;
+}
+
 @mixin phone{
     @media (min-width: var.$phone){
         @content;
