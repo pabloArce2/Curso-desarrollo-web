@@ -387,6 +387,8 @@ h3 {
 img {
   max-width: 100%;
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 .header {
@@ -519,7 +521,7 @@ img {
     text-align: left;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 5rem;
+    gap: 5rem;
   }
   .aboutus .underline {
     margin: 0;

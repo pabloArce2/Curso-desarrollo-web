@@ -35,7 +35,7 @@
     text-align: center;
     @include m.tablet{
         text-align: left;
-        @include m.grid;
+        @include m.grid(2);
         .underline{
             margin: 0;
         }

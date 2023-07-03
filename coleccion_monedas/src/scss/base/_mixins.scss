@@ -13,10 +13,10 @@
     border-radius: 4px;
 }
 
-@mixin grid(){
+@mixin grid($columnas){
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 5rem;
+    grid-template-columns: repeat($columnas, 1fr);
+    gap: 5rem;
 }
 
 @mixin phone{
