@@ -487,7 +487,9 @@ img {
 }
 
 .section1 {
-  background-color: #222222;
+  background: rgb(30, 58, 43);
+  background: radial-gradient(circle, rgb(30, 58, 43) 0%, rgb(34, 34, 34) 100%);
+  padding: 5rem 0;
 }
 
 .aboutus-content {
@@ -536,4 +538,14 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.section2 {
+  background: rgb(45, 207, 129);
+  background: radial-gradient(circle, rgb(45, 207, 129) 0%, rgb(14, 143, 78) 100%);
+}
+
+.catalogo {
+  padding: 5rem 0;
+  text-align: center;
 }

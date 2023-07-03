@@ -2,7 +2,9 @@
 @use 'base/variables' as var;
 
 .section1{
-    background-color: var.$negro;
+    background: rgb(30, 58, 43);
+    background: radial-gradient(circle, rgba(30, 58, 43, 1) 0%, rgba(34, 34, 34, 1) 100%);
+    padding : 5rem 0;
 }
 
 .aboutus-content {
