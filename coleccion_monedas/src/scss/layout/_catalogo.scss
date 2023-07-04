@@ -8,5 +8,94 @@
 
 .catalogo{
     padding: 5rem 0;
-    text-align: center;
+    
+    h2, p{
+        text-align: center;
+        color: var.$blanco;
+    }
+    .n-pais {
+        color: var.$negro;
+    }
+
+    .n-continente{
+        text-transform: uppercase;
+        margin: 4rem 0;
+    }
+}
+
+.continente-container{
+    @include m.tablet{
+        @include m.grid(2);
+        .catalogo-moneda{
+            margin-bottom: 0;
+        }
+    }
+    color: var.$negro;
+}
+
+.bg-color1{
+    background-color: var.$verde-menta;
+
+    li:nth-child(odd){
+        background-color: darken(var.$verde-menta, 10%)
+    }
+}
+
+.bg-color2{
+    background-color: var.$verde-amarillento;
+    li:nth-child(odd) {
+        background-color: darken(var.$verde-amarillento, 10%)
+    }
+}
+
+.catalogo-moneda{
+    @include m.shadow(var.$negro);
+    margin-bottom: 3rem;
+    padding-top: 2rem;
+    .n-pais{
+        &:after{
+            content: "";
+            display: block;
+            width: 12rem;
+            height: 6rem;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 2rem auto 4rem auto;
+        }
+    }
+}
+
+.spain .n-pais:after{
+    background-image: url("../assets/img/Bandera_de_Spain.png");
+}
+
+.inglaterra .n-pais:after {
+    background-image: url("../assets/img/Bandera_de_Inglaterra.jpg");
+}
+
+.usa .n-pais:after {
+    background-image: url("../assets/img/Bandera_de_USA.png");
+}
+
+.mexico .n-pais:after {
+    background-image: url("../assets/img/Bandera_de_Mexico.png");
+}
+
+.monedas{
+    @include m.reset-list;
+    li{
+        padding: 2.5rem;
+        font-weight: 700;
+        span{
+            font-weight: 400;
+        }
+    }
+}
+
+.underline{
+    color: var.$negro !important;
+    font-weight: 500 !important;
+    margin: 2rem auto;
+    width: 90%;
 }
