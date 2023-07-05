@@ -12,10 +12,12 @@ function crearGaleria() {
     for (let i = 1; i <= 12; i++) {
         const imagen = document.createElement("picture");
         imagen.innerHTML = `
-            <source srcset="build/img/thumb/${i}.webp" type="image/webp">
-            <img loading="lazy" width="200" height="300" src="build/img/thumb/${i}.jpg" alt="Imagen galeria">
+            <source srcset="build/assets/img/thumb/imagen${i}.webp" type="image/webp">
+            <img loading="lazy" width="200" height="300" src="build/assets/img/thumb/imagen${i}.jpg" alt="Imagen galeria">
         `;
-
+        console.log(i);
         galeria.appendChild(imagen);
     }
 }
+
+iniciarApp();
