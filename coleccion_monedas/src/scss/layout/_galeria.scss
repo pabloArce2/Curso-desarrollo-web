@@ -1,0 +1,7 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as var;
+
+.galeria {
+    padding: 5rem 0;
+    color : var.$blanco;
+}

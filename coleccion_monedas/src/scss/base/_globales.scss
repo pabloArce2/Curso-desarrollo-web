@@ -53,3 +53,13 @@ img{
     width: 100%;
     height: auto;
 }
+
+.bg-1{
+    background: rgb(30, 58, 43);
+    background: radial-gradient(circle, rgba(30, 58, 43, 1) 0%, rgba(34, 34, 34, 1) 100%);
+}
+
+.bg-2{
+    background: rgb(45, 207, 129);
+    background: radial-gradient(circle, rgba(45, 207, 129, 1) 0%, rgba(14, 143, 78, 1) 100%);
+}
