@@ -21,6 +21,7 @@ function css(done) {
     src("src/scss/**/*.scss") // Archivo de entrada
         .pipe(plumber()) // Evita que se detenga el proceso en caso de error
         .pipe(sass()) // Compila el archivo SASS a CSS 
+        .pipe(postcss([autoprefixer(), cssnano()])) // Agrega los prefijos y minifica el CSS
         .pipe(dest("build/css")); // Carpeta de destino
     
     done();
