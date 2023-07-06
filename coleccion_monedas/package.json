@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/pabloArce2/Curso-desarrollo-web#readme",
   "dependencies": {
+    "gulp-terser-js": "^5.2.2",
     "sass": "^1.63.6"
   },
   "devDependencies": {

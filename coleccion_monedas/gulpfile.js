@@ -10,6 +10,8 @@ const cache = require('gulp-cache');
 const webp = require('gulp-webp');
 const imagemin = require('gulp-imagemin');
 
+const terser = require('gulp-terser-js');
+
 function tarea(done) {
     while (true) {
         console.log('Hola mundo');
@@ -52,6 +54,7 @@ function imagenes(done) {
 
 function javascript(done) {
     src("src/js/**/*.js")
+        .pipe(terser())
         .pipe(dest("build/js"));
     
     done();
