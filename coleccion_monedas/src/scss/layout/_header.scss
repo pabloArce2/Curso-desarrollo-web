@@ -4,7 +4,18 @@
 .header{
     background-color: var.$negro;
     padding: 1rem 0;
-
+    @include m.tablet{
+        padding: 0;
+        /*&.fijo {
+            left: 0;
+            top: 0;
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        } */
+        //Esto es para que el header se quede fijo, a mi no me convence.
+    }
     h1{
         margin-bottom: 4rem;
         color: var.$verde-oscuro;
@@ -14,17 +25,20 @@
     .container-content{
         @include m.tablet{
             display: flex;
-            justify-content: space-between;
+            justify-content:
+            space-between;
             align-items: center;
             margin : 0 auto;
         }
     }
+
+    
 }
 
 .primary-nav{
     @include m.tablet {
         display: flex;
-        gap: 2rem;
+        gap: 2.5rem;
     }
 
     a {

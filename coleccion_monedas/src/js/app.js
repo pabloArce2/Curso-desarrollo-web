@@ -3,7 +3,41 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function iniciarApp() {
+    navegacionFija();
     crearGaleria();
+    scrollNav();
+}
+
+function navegacionFija() {
+    const barra = document.querySelector(".header");
+    const aboutus = document.querySelector(".aboutus");
+    const body = document.querySelector("body");
+
+    window.addEventListener("scroll", function () {
+        if (aboutus.getBoundingClientRect().top < 0) {
+            barra.classList.add("fijo");
+            body.classList.add("body-scroll");
+        }
+        else {
+            barra.classList.remove("fijo");
+            body.classList.remove("body-scroll");
+        }
+    });
+    //No esta activado, ya que no me convence el efecto
+}
+
+
+function scrollNav() {
+    const enlaces = document.querySelectorAll(".navegacion-principal a");
+    enlaces.forEach(function (enlace) {
+        enlace.addEventListener("click", function (e) {
+            e.preventDefault();
+            const seccion = document.querySelector(e.target.attributes.href.value);
+            seccion.scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
 }
 
 function crearGaleria() {
