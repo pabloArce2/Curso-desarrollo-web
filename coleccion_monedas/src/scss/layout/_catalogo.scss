@@ -21,7 +21,9 @@
 }
 
 .continente-container{
+    text-align: center !important;
     @include m.tablet{
+        text-align: left !important;
         @include m.grid(2);
         .catalogo-moneda{
             margin-bottom: 0;
