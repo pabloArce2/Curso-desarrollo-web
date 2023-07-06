@@ -4,6 +4,7 @@ const plumber = require('gulp-plumber');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const postcss = require('gulp-postcss');
+const sourcemaps = require('gulp-sourcemaps');
 
 const cache = require('gulp-cache');
 const webp = require('gulp-webp');
@@ -19,9 +20,11 @@ function tarea(done) {
 function css(done) {
     
     src("src/scss/**/*.scss") // Archivo de entrada
+        .pipe(sourcemaps.init()) // Inicializa el mapa de archivos
         .pipe(plumber()) // Evita que se detenga el proceso en caso de error
         .pipe(sass()) // Compila el archivo SASS a CSS 
         .pipe(postcss([autoprefixer(), cssnano()])) // Agrega los prefijos y minifica el CSS
+        .pipe(sourcemaps.write('.')) // Escribe el mapa de archivos
         .pipe(dest("build/css")); // Carpeta de destino
     
     done();
