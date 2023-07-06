@@ -10,21 +10,34 @@
     }
 }
 
-.galeria-imagenes{
+.galeria-imagenes {
     @include m.reset-list;
     @include m.grid(2);
+
     @include m.phone {
         @include m.grid(3);
     }
+
     @include m.tablet {
         @include m.grid(4);
     }
+
     @include m.desktop {
         @include m.grid(6);
     }
+
+    picture {
+        transform: scale(1); 
+        transition: transform 0.4s ease-in-out; 
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.08);
+            transition: transform 0.4s ease-in-out; 
+        }
+    }
 }
 
-.overlay{
+.overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -37,21 +50,25 @@
     display: grid;
     place-items: center;
 
-    background-color: rgba(0,0,0,.8);
+    background-color: rgba(0, 0, 0, 0.8);
 
-    picture{
-        padding : 0 10%;
+    picture {
+        padding: 0 10%;
         padding-top: 0;
         display: block;
         max-width: fit-content;
-        @include m.phone{
+
+        @include m.phone {
             padding: 0;
             max-width: 50rem;
         }
     }
+
+    
+    transition: opacity 0.5s ease-in-out; 
 }
 
-.btn-cerrar{
+.btn-cerrar {
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
@@ -62,7 +79,9 @@
     font-weight: 700;
     place-items: center;
 
-    &:hover{
+    &:hover {
         cursor: pointer;
+        transform: rotate(180deg); 
+        transition: transform 0.6s ease-in-out;
     }
 }
