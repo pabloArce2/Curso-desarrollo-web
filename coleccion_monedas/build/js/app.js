@@ -34,15 +34,26 @@ function mostrarImagen(i) {
     const overlay = document.createElement("div");
     overlay.appendChild(imagen);
     overlay.classList.add("overlay");
+    overlay.onclick = function () {
+        const body = document.querySelector("body");
+        body.classList.remove("fijar-body");
+        overlay.remove();
+    }
 
     const cerrarModal = document.createElement("p");
     cerrarModal.textContent = "X";
     cerrarModal.classList.add("btn-cerrar");
+    cerrarModal.onclick = function () {
+        const body = document.querySelector("body");
+        body.classList.remove("fijar-body");
+        overlay.remove();
+    }
 
     overlay.appendChild(cerrarModal);
 
     const body = document.querySelector("body");
     body.appendChild(overlay);
+    body.classList.add("fijar-body");
 }
 
 iniciarApp();

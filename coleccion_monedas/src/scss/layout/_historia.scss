@@ -1,0 +1,58 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as var;
+
+.historia{
+    padding: 5rem 0;
+    width: 80%;
+    h2{
+        text-align: center;
+        margin-bottom: 2rem;
+        color: var.$blanco;
+    }
+}
+
+.historia-content{
+    padding: 4rem;
+    text-align: center;
+    margin: 4rem 0;
+    background-color: var.$negro;
+    color: var.$blanco;
+    @include m.shadow(var.$blanco);
+    @include m.tablet{
+        text-align: left;
+        @include m.grid(2);
+        grid-template-columns: 70% 30%;
+    }
+}
+
+.img-moneda{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    @include m.tablet{
+        padding: 0;
+        padding-right: 15%;
+    }
+
+    img{
+        max-width: 15rem;
+        min-width: 10rem;
+    }
+}
+
+.coin{
+    &:hover {
+        cursor: pointer;
+    }
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.cara{
+    transform: rotateY(180deg);
+}
+
+.cruz{
+    transform: rotateY(0deg);
+}

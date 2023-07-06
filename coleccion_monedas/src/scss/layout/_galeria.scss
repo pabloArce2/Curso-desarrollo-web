@@ -39,9 +39,15 @@
 
     background-color: rgba(0,0,0,.8);
 
-    .picture{
+    picture{
+        padding : 0 10%;
+        padding-top: 0;
         display: block;
-        max-width: 50rem;
+        max-width: fit-content;
+        @include m.phone{
+            padding: 0;
+            max-width: 50rem;
+        }
     }
 }
 
@@ -52,7 +58,7 @@
     background-color: var.$blanco;
     color: var.$negro;
     display: grid;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 700;
     place-items: center;
 
