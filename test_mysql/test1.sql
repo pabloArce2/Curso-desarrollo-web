@@ -1,5 +1,6 @@
 show databases;
 use holamundo;
+use ejercicio1;
 CREATE TABLE services (
 	id int(12) not null auto_increment,
     name varchar(64) not null,
